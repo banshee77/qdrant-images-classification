@@ -1,0 +1,13 @@
+@startuml
+participant User as "User"
+participant Streamlit as "Streamlit"
+participant Qdrant as "Qdrant"
+participant FastEmbed as "FastEmbed"
+
+User ->> Streamlit: Upload image(s)
+Streamlit ->> Qdrant: Classify image(s)
+Qdrant ->> FastEmbed: Generate embeddings from Image(s)
+FastEmbed -->> Qdrant: Return generated embeddings
+Qdrant ->> Qdrant: Search for the closest "human" match in "image_classification" collection
+Qdrant ->> Streamlit: Image(s) classified
+Streamlit ->> User: Display if "human" is on Image(s)

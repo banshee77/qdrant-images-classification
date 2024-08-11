@@ -1,0 +1,10 @@
+@startuml
+participant User as "User"
+participant Qdrant as "Qdrant"
+participant FastEmbed as "FastEmbed"
+
+User ->> Qdrant: Add Images with "human" and "without human" as reference
+Qdrant ->> FastEmbed: Generate embeddings from Images
+FastEmbed -->> Qdrant: Return generated embeddings
+Qdrant ->> Qdrant: Store embeddings in  "image_classification" collection
+Qdrant ->> User: Confirm storage

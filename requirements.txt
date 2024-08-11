@@ -1,0 +1,5 @@
+fastembed
+qdrant-client
+plantuml
+streamlit
+ipython
