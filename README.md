@@ -28,5 +28,5 @@ pip3 install -r requirements.txt
 
 # Run application
 ```
-steamlit run app.py
+streamlit run app.py
 ```
