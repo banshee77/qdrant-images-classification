@@ -3,9 +3,10 @@ import streamlit as st
 from scripts.image_clasification import classify_new_image
 from PIL import Image
 
+st.title("Human Detection Application 🪄")
 with st.form("my-form", clear_on_submit=True):        
-    uploaded_files = st.file_uploader("Choose photos to upload", accept_multiple_files=True, type=['png', 'jpeg', 'jpg'])
-    submit_button = st.form_submit_button(label='Submit Photos')
+    uploaded_files = st.file_uploader("Choose images to upload", accept_multiple_files=True, type=['png', 'jpeg', 'jpg'])
+    submit_button = st.form_submit_button(label='Submit images')
     pic_names = [] 
     labels = []
 
